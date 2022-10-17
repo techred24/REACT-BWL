@@ -1,0 +1,89 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+  margin: 0;
+  padding: 0;
+}
+.initial-page {
+  height: 100vh;
+  background-image: url(../src/assets/login-image.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup-component,
+.login-component {
+  padding: 2em;
+  background-color: rgba(37, 37, 112, 0.15);
+  max-width: 40%;
+  min-width: 40%;
+  /* min-height: 85%; */
+  border-radius: 1rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around; */
+}
+.signup-title,
+.login-title {
+  text-align: center;
+}
+.passwords-field {
+  display: flex;
+  gap: 1rem;
+}
+.passwords-field .inputs {
+  width: 50%;
+}
+.inputs input {
+  width: 100%;
+  padding: .5rem;
+}
+.inputs label {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.765);
+}
+.button-submit {
+  all: unset;
+  padding: .5rem;
+  border-radius: .5rem;
+  background-color: aqua;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  width: 95%;
+  margin: 2rem auto 0;
+  cursor: pointer;
+  color: rgb(145, 114, 114);
+}
+.register-link-component,
+.login-link-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.register-link-component .send-to-register,
+.login-link-component .send-to-login {
+  all: unset;
+  color: rgb(198, 225, 216);
+  cursor: pointer;
+  background-color: rgba(198, 225, 216, .2);
+  padding: .5rem;
+  border-radius: 5px;
+}
+.register-link-component .send-to-register:hover,
+.login-link-component .send-to-login:hover {
+  color: white;
+  background-color: rgba(221, 235, 230, 0.6);
+}
