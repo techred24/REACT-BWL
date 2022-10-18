@@ -13,7 +13,7 @@ body {
   padding: 0;
 }
 .initial-page {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../src/assets/login-image.jpg);
   background-position: center;
   background-size: cover;
@@ -27,11 +27,7 @@ body {
   background-color: rgba(37, 37, 112, 0.15);
   max-width: 40%;
   min-width: 40%;
-  /* min-height: 85%; */
   border-radius: 1rem;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-around; */
 }
 .signup-title,
 .login-title {
@@ -86,4 +82,114 @@ body {
 .login-link-component .send-to-login:hover {
   color: white;
   background-color: rgba(221, 235, 230, 0.6);
+}
+.nav {
+  background-color: rgb(39, 126, 126);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.nav__navigation {
+  display: flex;
+  align-items: center;
+}
+.nav__navigation-buttons {
+  box-sizing: border-box;
+  all: unset;
+  color: aliceblue;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2rem;
+  cursor: pointer;
+}
+@media (max-width:490px) {
+  .nav__navigation-buttons {
+    box-sizing: border-box;
+    padding: 1rem 2px;
+    font-size: 11px;
+    height: 100%;
+  }
+}
+.nav__navigation-buttons:hover {
+  background-color: rgb(63, 199, 81);
+}
+.nav__userinfo {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+@media (max-width:490px) {
+  .nav__userinfo {
+    gap: 5px;
+  }
+}
+.nav__photo {
+  background-color: rgb(117, 50, 180);
+  color: aliceblue;
+  text-transform: uppercase;
+  border-radius: 50%;
+  border: 2px solid white;
+  width: 25px;
+  height: 25px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width:490px) {
+  .nav__photo {
+    padding: 15px;
+    font-size: 11px;
+    border: 1.5px solid white;
+  }
+}
+.nav__username {
+  color: white;
+  cursor: pointer;
+  /* margin: 0; */
+}
+@media (max-width:490px) {
+  .nav__username {
+    font-size: 13px;
+  }
+}
+.grid__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem;
+  gap: 2rem;
+}
+@media (min-width: 490px) {
+  .grid__cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.cards__grid {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width:490px) {
+  .cards__grid {
+    grid-column: 1 / 4;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.countries__card {
+  grid-row-start: 1;
+  /* grid-row-start: unset; */
+}
+@media (min-width: 490px) {
+  .countries__card {
+    grid-row-start: unset;
+  }
+}
+.card, .countries__card {
+  box-shadow: 0 0 20px 1px black;
+  padding: 2rem;
+  border-radius: 5px;
+}
+.card__title {
+  margin: 0;
+  padding: .3rem;
+  border-bottom: 3px solid blue;
 }

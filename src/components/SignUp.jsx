@@ -13,7 +13,7 @@ export const SignUp = ({ setInLoginPage }) => {
         e.preventDefault();
         const data = await sendPost('http://localhost:3000/register', formState);
         if (data.error) return
-        if (data.email && data.name) 
+        // if (data.email && data.name) 
     }
   return (
     <div className='signup-component'>

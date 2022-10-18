@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { sendPost } from '../helpers/fetchFunctions';
 import { useForm } from '../hooks/useForm'
 
 export const Login = ({ setInLoginPage }) => {
+    let navigate = useNavigate();
     const { formState, email, password, inputChange } = useForm({
         email: '',
         password: ''
@@ -12,6 +13,8 @@ export const Login = ({ setInLoginPage }) => {
         e.preventDefault();
         const data = await sendPost('http://localhost:3000/login', formState);
         if (data.error) return
+        console.log(data, 'DATOS')
+        navigate('/dashboard');
     }
   return (
     <div className='login-component'>
