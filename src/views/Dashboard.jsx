@@ -1,6 +1,6 @@
 import React from 'react'
 import { Nav } from '../components/Nav'
-
+import mexicanfla from '../assets/mexico.jpg'
 export const Dashboard = () => {
   return (
     <>
@@ -28,7 +28,46 @@ export const Dashboard = () => {
                     <h2 className='card__title'>Tareas Pendientes</h2>
                     <div className='card__content'>
                       <div className="content">
-
+                        <p>Ir al banco</p>
+                        <p>Revisar balance general</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
+                        <p>Ajustar metricas de diseño</p>
                       </div>
                     </div>
                 </div>
@@ -59,8 +98,23 @@ export const Dashboard = () => {
             </div>
             <aside className='countries__card'>
                 <h2 className='card__title'>Países Disponibles</h2>
-                <div className='countries'>
-
+                <div className='card__content countries'>
+                    <div className="countries__content">
+                      <div className="content">
+                        <div className='country'>
+                          <img src={mexicanfla} alt="flag" />
+                          <p className='country__name'>Mexico</p>
+                        </div>
+                        <div className='country'>
+                          <img src={mexicanfla} alt="flag" />
+                          <p className='country__name'>Mexico</p>
+                        </div>
+                        <div className='country'>
+                          <img src={mexicanfla} alt="flag" />
+                          <p className='country__name'>Mexico</p>
+                        </div>
+                      </div>
+                    </div>
                 </div>
             </aside>
         </main>
