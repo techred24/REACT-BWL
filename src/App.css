@@ -222,22 +222,65 @@ body {
   background-color: rgb(167, 167, 107);
   border-radius: 1rem;
 }
-.countries__content {
-  max-width: 100%;
+
+
+
+
+
+
+
+@media (min-width:780px) {
+  .countries__section {
+    margin-top: 1rem;
+  }
 }
-.countries__content .content {
+.countries__wrapper {
+  max-width: 78vw;
+  max-height: 100%;
   margin: 0 auto;
+
   display: flex;
-  max-width: 75vw;
-  gap: 7rem;
-  /* background-color: antiquewhite; */
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 5rem;
 }
-.countries__content img {
-  max-width: 150px;
+@media (min-width:780px) {
+  .countries__wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.countries__wrapper::-webkit-scrollbar {
+  background-color: rgb(226, 226, 193);
+  height: 8px;
+  border-radius: 1rem;
+}
+.countries__wrapper::-webkit-scrollbar-thumb {
+  background-color: rgb(167, 167, 107);
+  border-radius: 1rem;
 }
 .country {
+  all: unset;
+  flex: 0 0 auto;
+  padding: 1rem 0;
+  text-align: center;
+  font-weight: bold;
   cursor: pointer;
+  border-radius: 1rem;
+}
+@media (min-width:780px) {
+  .country {
+    padding: 1rem;
+  }
+  .country:hover {
+    background-color: antiquewhite;
+  }
+}
+.countries__section img {
+  max-width: 150px;
 }
 .country__name {
-  text-align: center;
+  margin: 0;
+  line-height: 1;
 }

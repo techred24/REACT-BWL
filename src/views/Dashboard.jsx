@@ -2,6 +2,10 @@ import React from 'react'
 import { Nav } from '../components/Nav'
 import mexicanfla from '../assets/mexico.jpg'
 export const Dashboard = () => {
+  const selectCountry = (countryName) => {
+    console.log(countryName, 'NAME')
+  }
+  const countriesToShow = ['México', 'Estados Unidos', 'Chile'];
   return (
     <>
       <Nav/>
@@ -31,43 +35,6 @@ export const Dashboard = () => {
                         <p>Ir al banco</p>
                         <p>Revisar balance general</p>
                         <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
-                        <p>Ajustar metricas de diseño</p>
                       </div>
                     </div>
                 </div>
@@ -96,24 +63,23 @@ export const Dashboard = () => {
                     </div>
                 </div>
             </div>
+
+
+
             <aside className='countries__card'>
                 <h2 className='card__title'>Países Disponibles</h2>
-                <div className='card__content countries'>
-                    <div className="countries__content">
-                      <div className="content">
-                        <div className='country'>
-                          <img src={mexicanfla} alt="flag" />
-                          <p className='country__name'>Mexico</p>
-                        </div>
-                        <div className='country'>
-                          <img src={mexicanfla} alt="flag" />
-                          <p className='country__name'>Mexico</p>
-                        </div>
-                        <div className='country'>
-                          <img src={mexicanfla} alt="flag" />
-                          <p className='country__name'>Mexico</p>
-                        </div>
-                      </div>
+
+                <div className='countries__section'>
+                    <div className="countries__wrapper">
+                        {
+                          countriesToShow.map((country, i) => {
+                            const key = country.split(' ').join('-') + i;
+                            return  <button className='country' onClick={() => selectCountry(country)} key={key}>
+                                        <img src={mexicanfla} alt="flag" />
+                                        <p className='country__name'>{country}</p>
+                                    </button>
+                          })
+                        }
                     </div>
                 </div>
             </aside>
